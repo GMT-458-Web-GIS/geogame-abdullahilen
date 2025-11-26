@@ -29,12 +29,6 @@
     * The scoring formula must reward proximity. The closer the guess is to the real number, the more points it receives.
 * **Game Over:** The game ends after the user submits their guess for the 5th country. A final screen will display the `totalScore`.
 
-### 2. Technical Requirements
-* **Frontend:** HTML5, CSS3, JavaScript (ES6+).
-* **Core Library:** **Cesium.js** (for the 3D globe).
-* **Data Format:** **GeoJSON** or **TopoJSON** for country boundaries. A simple **JSON** file for the country area data (`{ "country": "Turkey", "area": 783562 }`).
-* **Environment:** Must be a client-side application that runs in modern web browsers.
-
 ---
 
 ## Frontend Layout & Sketch
@@ -100,5 +94,4 @@ The game is a simple quiz in 5 rounds.
 ### How many questions will there be
 There will be a fixed total of **5 questions** (5 countries).
 
-### How many lives, if any, does a user have?
 There is **no live structure**. The user plays through all 5 questions, and the final score is the only measure of success.
