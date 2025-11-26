@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SquareGuesser: The Area Challenge</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.118/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
+</head>
+<body>
+
+    <div id="cesiumContainer"></div>
+
+    <div id="uiContainer">
+       <div class="header">
+    <h1>SquareGuesser</h1>
+    <h2>Guess the Area!</h2>
+    </div>
+
+        <div class="game-status">
+    <span>Score: <span id="scoreDisplay">0</span></span>
+    <span style="color: #f1c40f;">Best: <span id="highScoreDisplay">0</span></span> <span>Question: <span id="questionDisplay">1</span> / 5</span>
+    </div>
+
+        <div class="content">
+            <div class="question-box">
+                <h3>Guess the Area (km²)</h3>
+                <span class="country-name" id="countryNameDisplay">Loading...</span>
+                <input type="number" id="areaInput" placeholder="e.g. 783562">
+                <button id="submitBtn" onclick="submitGuess()">Submit Guess</button>
+            </div>
+
+            <div class="feedback-box" id="feedbackBox" style="visibility: hidden;">
+                <div style="margin-bottom:10px; font-weight:bold; border-bottom:1px solid #555; padding-bottom:5px;">Last Round Result:</div>
+                <div class="feedback-item">
+                    <span class="feedback-label">Country:</span> <span class="feedback-value" id="fbCountry">-</span>
+                </div>
+                <div class="feedback-item">
+                    <span class="feedback-label">Your Guess:</span> <span class="feedback-value" id="fbGuess">-</span>
+                </div>
+                <div class="feedback-item">
+                    <span class="feedback-label">Real Area:</span> <span class="feedback-value" id="fbReal">-</span>
+                </div>
+                <div class="feedback-item">
+                    <span class="feedback-label">Points:</span> <span class="feedback-value" id="fbPoints" style="color: #f1c40f;">-</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="gameOverModal">
+        <h1>GAME OVER</h1>
+        <div id="finalScore">Total Score: 0</div>
+        <button onclick="location.reload()" style="width: 200px;">Play Again</button>
+    </div>
+
+    <script src="data.js"></script> <script src="script.js"></script>
+</body>
+</html>

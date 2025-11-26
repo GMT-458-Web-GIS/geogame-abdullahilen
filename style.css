@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body, html {
+    width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+    body, html {
+    font-family: 'Poppins', sans-serif; 
+    background-color: #121212; 
+}
+}
+
+
+#cesiumContainer {
+    position: absolute;
+    top: 0; left: 0;
+    width: 70%; height: 100%;
+}
+
+
+#uiContainer {
+    position: absolute;
+    top: 0; right: 0;
+    width: 30%; height: 100%;
+    background: #1e1e1e;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+
+.header {
+    padding: 20px;
+    background: #2c3e50;
+    text-align: center;
+    border-bottom: 2px solid #34495e;
+}
+.header h1 { margin: 0; font-size: 1.5rem; }
+.header h2 { margin: 5px 0 0; font-size: 0.9rem; color: #bdc3c7; }
+
+.game-status {
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    background: #252525;
+    font-weight: bold;
+}
+
+.content {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.question-box {
+    background: #070b4b;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.question-box h3 { margin-top: 0; color: #3498db; }
+.country-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #df6781;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    display: block;
+    margin: 15px 0;
+    letter-spacing: 1px;
+}
+
+input[type="number"] {
+    width: 80%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+button {
+    background: #27ae60;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 100%;
+    transition: background 0.2s;
+}
+button:hover { background: #2ecc71; }
+button:disabled { background: #7f8c8d; cursor: not-allowed; }
+
+.feedback-box {
+    background: #2c2c2c;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #7f8c8d; 
+}
+
+.feedback-item { margin-bottom: 8px; font-size: 0.9rem; }
+.feedback-label { color: #aaa; }
+.feedback-value { font-weight: bold; color: #fff; }
+
+
+#gameOverModal {
+    display: none;
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#gameOverModal h1 { font-size: 3rem; color: #f1c40f; }
+#finalScore { font-size: 2rem; color: #fff; margin-bottom: 20px; }
